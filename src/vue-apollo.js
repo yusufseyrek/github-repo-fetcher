@@ -4,7 +4,9 @@ import { createApolloClient, restartWebsockets } from 'vue-cli-plugin-apollo/gra
 
 Vue.use(VueApollo)
 
-const GITHUB_AUTHORIZATION_TOKEN = 'Bearer b194af737aa5f5005c1ffd4915ef7da09742d9a4';
+// PLACE YOUR GITHUB ACCESS TOKEN BELOW
+const GITHUB_ACCESS_TOKEN = "";
+const AUTHORIZATION = 'Bearer ' + GITHUB_ACCESS_TOKEN;
 const AUTH_TOKEN = 'apollo-token'
 
 const httpEndpoint = ' https://api.github.com/graphql'
@@ -15,7 +17,7 @@ const defaultOptions = {
   persisting: false,
   websocketsOnly: false,
   ssr: false,
-  getAuth: () => GITHUB_AUTHORIZATION_TOKEN
+  getAuth: () => AUTHORIZATION
 }
 
 export function createProvider (options = {}) {

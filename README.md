@@ -6,6 +6,8 @@
 ```
 npm install
 ```
+Place your Github access token in src/vue-apollo file. You can generate a token from; https://github.com/settings/tokens
+
 
 ### Compiles and hot-reloads for development
 ```
