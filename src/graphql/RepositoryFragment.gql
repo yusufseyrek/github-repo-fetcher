@@ -1,0 +1,10 @@
+
+fragment Repository on Repository {
+  id,
+  name,
+  url,
+  description,
+  stargazers {
+    totalCount
+  }
+}
